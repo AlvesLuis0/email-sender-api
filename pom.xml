@@ -14,13 +14,14 @@
   </parent>
 
   <groupId>com.alves</groupId>
-  <artifactId>email-sender</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>email-sender</name>
+  <artifactId>email-sender-api</artifactId>
+  <version>v1</version>
+  <name>email-sender-api</name>
   <description>Demo project for Spring Boot</description>
 
   <properties>
     <java.version>17</java.version>
+    <swagger.version>2.3.0</swagger.version>
   </properties>
 
   <dependencies>
@@ -41,6 +42,12 @@
       <optional>true</optional>
     </dependency>
 
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <version>${swagger.version}</version>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -48,18 +55,10 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <excludes>
-            <exclude>
-              <groupId>org.projectlombok</groupId>
-              <artifactId>lombok</artifactId>
-            </exclude>
-          </excludes>
-        </configuration>
       </plugin>
     </plugins>
 
-    <finalName>email-sender</finalName>
+    <finalName>email-sender-api</finalName>
   </build>
 
 </project>
