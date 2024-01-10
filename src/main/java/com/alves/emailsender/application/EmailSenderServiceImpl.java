@@ -4,8 +4,8 @@ import org.springframework.stereotype.Service;
 
 import com.alves.emailsender.adapters.EmailSenderGateway;
 import com.alves.emailsender.core.EmailSenderService;
-import com.alves.emailsender.core.exception.InvalidEmailException;
-import com.alves.emailsender.core.exception.MandatoryArgumentException;
+import com.alves.emailsender.core.exceptions.InvalidEmailException;
+import com.alves.emailsender.core.exceptions.MandatoryArgumentException;
 
 @Service
 public class EmailSenderServiceImpl implements EmailSenderService {
