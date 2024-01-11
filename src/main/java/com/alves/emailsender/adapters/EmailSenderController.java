@@ -1,4 +1,4 @@
-package com.alves.emailsender.controllers;
+package com.alves.emailsender.adapters;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
