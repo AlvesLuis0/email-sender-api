@@ -70,3 +70,4 @@ The following tools were used to build the project:
 
 - Sending e-mails
 - Validation of an e-mail with _regex_
+- Clean architecture, making classes only depend on abstractions
