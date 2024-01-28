@@ -1,78 +1,109 @@
 ![E-mail Sender Banner](.github/banner.png)
 
-# ✉️ Email Sender API
+<h1 align="center" style="font-weight: bold;">
+  Email Sender API 📨
+</h1>
 
-API for sending *e-mail*
+<p align="center">
+  <a href="#tech">Technologies</a> •
+  <a href="#started">Getting Started</a> •
+  <a href="#routes">API Endpoints</a> •
+  <a href="#colab">Collaborators</a> •
+  <a href="#contribute">Contribute</a>
+</p>
 
-## 📝 Features
+<p align="center">
+  <b>API for sending e-mail</b>
+</p>
 
-- [x] Send simple e-mails
+<h2 id="technologies">💻 Technologies</h2>
 
-## 👾 Demo
+- Java
+- Spring Boot
+- Docker
+- RabbitMQ
 
-![Home Page](.github/home-page.png)
-![Request](.github/request.png)
-![E-mail](.github/email.jpeg)
+<h2 id="started">🚀 Getting started</h2>
 
-## ❓ How to Use
+<h3>Prerequisites</h3>
 
-### ✋ Prerequisites
-
-Before starting, you will need to have the following tools installed on your machine:
-[Git](https://git-scm.com), [JDK 17](https://www.oracle.com/java/), [Maven](https://maven.apache.org/),
-[Docker and Docker Compose](https://docs.docker.com/).
-Furthermore, it is good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/)
-
-### 🚀 Running
-
-```bash
-# Clone this repository
-git clone https://github.com/alvesluis0/email-sender-api
-
-# Access the project folder in terminal/cmd
-cd email-sender-api
-
-# Run dependency containers 
-docker compose up -d
-```
-
-Modify the environment variables in the
-[application.properties](/src/main/resources/application.properties) file to their respective values
-
-```bash
-spring.mail.username=${MAIL_USERNAME}
-spring.mail.password=${MAIL_PASSWORD}
-
-# For example
-spring.mail.username=example@gmail.com
-spring.mail.password=asda qwer uiop zxcv vbnm
-```
-
-```bash
-# Install the application
-mvn package
-
-# Run the application
-java -jar target/email-sender-api.jar
-
-# The server will start on port:8080 - access <http://localhost:8080/swagger-ui.html> to test
-```
-
-If you are having problems with Authentication, please follow the steps in this
-[tutorial](https://www.techmazza.com/solve-java-mail-authentication-failed-exception-in-springboot/)
-
-## 🛠 Technologies
-
-The following tools were used to build the project:
-
-- [Java 17](https://www.oracle.com/java/)
-- [Maven](https://maven.apache.org/)
-- [Spring Boot](https://spring.io/)
-- [Java Mail Sender](https://www.baeldung.com/spring-email)
+- [Git](https://git-scm.com)
+- [JDK 17](https://openjdk.org/projects/jdk/17/)
+- [Maven](https://maven.apache.org/),
 - [Docker and Docker Compose](https://docs.docker.com/)
 
-## 🔖 Learnings
+<h3>Cloning</h3>
 
-- Sending e-mails
-- Validation of an e-mail with _regex_
-- Clean architecture, making classes only depend on abstractions
+```bash
+git clone https://github.com/alvesluis0/email-sender-api
+```
+
+<h3>Config .env variables</h2>
+
+Use the `.env.example` as reference to create your configuration file `.env` with your credentials
+
+```yaml
+MAIL_USERNAME=myemail123@example.com
+MAIL_PASSWORD=qwer uiop zxcv vbnm
+```
+
+<h3>Starting</h3>
+
+How to start your project
+
+```bash
+cd email-sender-api
+# Make sure you have already created your .env file in the project root
+mvn spring-boot:run
+```
+
+<h2 id="routes">📍 API Endpoints</h2>
+
+| route                         | description                                          
+|-------------------------------|-------------------------------------------------------------------
+| <kbd>POST /send-email</kbd>   | send email to someone - [request details](#post-send-email-detail)
+
+<h3 id="post-send-email-detail">POST /send-email</h3>
+
+**REQUEST**
+```json
+{
+  "to": "test@gmail.com",
+  "subject": "Testing my API",
+  "text": "Hi brooooo"
+}
+```
+
+<h2 id="colab">🤝 Collaborators</h2>
+
+Special thank you for all people that contributed for this project.
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/alvesluis0">
+        <img
+          src="https://avatars.githubusercontent.com/u/104936483?v=4"
+          width="100px;"
+          alt="Alves Luis Profile Picture"
+        /><br>
+        <sub>
+          <b>Alves Luis</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<h2 id="contribute">📫 Contribute</h2>
+
+1. `git clone https://github.com/alvesluis0/email-sender-api`
+2. `git checkout -b feature/NAME`
+3. Follow commit patterns
+4. Open a Pull Request explaining the problem solved or feature made, if exists, append screenshot of visual modifications and wait for the review!
+
+<h3>Documentations that might help</h3>
+
+[📝 How to create a Pull Request](https://www.atlassian.com/br/git/tutorials/making-a-pull-request)
+
+[💾 Commit pattern](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
