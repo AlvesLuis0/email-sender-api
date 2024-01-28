@@ -53,6 +53,7 @@ How to start your project
 
 ```bash
 cd email-sender-api
+docker compose up -d
 # Make sure you have already created your .env file in the project root
 mvn spring-boot:run
 ```
