@@ -23,8 +23,7 @@ public class RabbitMQProducerImpl implements ProducerGateway {
     try {
       json = mapper.writeValueAsString(payload);
       template.convertAndSend(
-        rabbitConfig.getExchangeName(),
-        rabbitConfig.getRoutingKey(),
+        rabbitConfig.getQueueName(),
         json
       );
     }

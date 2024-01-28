@@ -14,12 +14,12 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Component
-public class Consumer {
+public class EmailConsumer {
 
   private final EmailSenderGateway emailSenderGateway;
   private final ObjectMapper mapper;
 
-  @RabbitListener(queues = "email-queue")
+  @RabbitListener(queues = "${message-broker.queueName}")
   public void sendEmail(@Payload Message<String> message) throws JsonMappingException, JsonProcessingException {
     var json = mapper.readTree(message.getPayload());
     emailSenderGateway.sendEmail(

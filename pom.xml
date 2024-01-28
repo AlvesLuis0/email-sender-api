@@ -15,7 +15,7 @@
 
   <groupId>com.alves</groupId>
   <artifactId>email-sender-api</artifactId>
-  <version>v1</version>
+  <version>v2</version>
   <name>email-sender-api</name>
   <description>Demo project for Spring Boot</description>
 

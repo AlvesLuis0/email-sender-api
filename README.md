@@ -19,7 +19,8 @@ API for sending *e-mail*
 ### ✋ Prerequisites
 
 Before starting, you will need to have the following tools installed on your machine:
-[Git](https://git-scm.com), [JDK 17](https://www.oracle.com/java/), [Maven](https://maven.apache.org/). 
+[Git](https://git-scm.com), [JDK 17](https://www.oracle.com/java/), [Maven](https://maven.apache.org/),
+[Docker and Docker Compose](https://docs.docker.com/).
 Furthermore, it is good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/)
 
 ### 🚀 Running
@@ -30,6 +31,9 @@ git clone https://github.com/alvesluis0/email-sender-api
 
 # Access the project folder in terminal/cmd
 cd email-sender-api
+
+# Run dependency containers 
+docker compose up -d
 ```
 
 Modify the environment variables in the
@@ -65,6 +69,7 @@ The following tools were used to build the project:
 - [Maven](https://maven.apache.org/)
 - [Spring Boot](https://spring.io/)
 - [Java Mail Sender](https://www.baeldung.com/spring-email)
+- [Docker and Docker Compose](https://docs.docker.com/)
 
 ## 🔖 Learnings
 
